@@ -1,0 +1,42 @@
+{
+  "name": "note-digitizer",
+  "version": "0.1.0",
+  "description": "Photo of handwritten notes in, Markdown and a Mermaid diagram out. Hono server + Claude Agent SDK, one static HTML page.",
+  "license": "MIT",
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nuromirzak/note-digitizer.git"
+  },
+  "keywords": [
+    "handwriting",
+    "ocr",
+    "claude",
+    "claude-agent-sdk",
+    "mermaid",
+    "markdown",
+    "hono"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "start": "tsx server.ts",
+    "typecheck": "tsc --noEmit",
+    "test": "node --import tsx --test tests/*.test.ts",
+    "eval": "node --import tsx --test --test-timeout=240000 tests/live/*.test.ts"
+  },
+  "dependencies": {
+    "@anthropic-ai/claude-agent-sdk": "^0.3.322",
+    "@hono/node-server": "^2.1.7",
+    "hono": "^4.13.18",
+    "marked": "^18.2.0",
+    "mermaid": "^12.3.0",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.6",
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2"
+  }
+}
